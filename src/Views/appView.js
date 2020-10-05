@@ -335,17 +335,13 @@ export default class AppView {
 
   renderLocationResults(cities) {
     let mobileScreen = window.matchMedia("(max-width: 608px)");
-    let smallMobileScreen = window.matchMedia("(max-width: 450px)");
     if (cities.length) {
       // Create div for location results
       this.locationResults = document.createElement("div");
       this.locationResults.setAttribute("class", "location__results");
 
       if (mobileScreen.matches && cities.length == 1) {
-        this.locationResults.style.marginTop = "-50rem";
-      }
-      if (smallMobileScreen.matches && cities.length == 1) {
-        this.locationResults.style.marginTop = "-62rem";
+        this.locationResults.style.top = "-57%";
       }
 
       // Append individual results to the locationResults
@@ -383,10 +379,7 @@ export default class AppView {
     this.locationResults.setAttribute("class", "location__results");
 
     if (mobileScreen.matches) {
-      this.locationResults.style.marginTop = "-60rem";
-    }
-    if (smallMobileScreen.matches) {
-      this.locationResults.style.marginTop = "-74rem";
+      this.locationResults.style.top = "-60%";
     }
 
     this.locationResults.insertAdjacentHTML(

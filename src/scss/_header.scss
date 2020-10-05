@@ -112,7 +112,7 @@
   flex-direction: column;
 
   @media only screen and (max-width: $bp-small) {
-    height: 85%;
+    height: 95%;
   }
 
   &__close {
@@ -399,13 +399,15 @@
 
       flex: 1;
       margin: 1rem 1.5rem;
-      margin-top: -15rem;
+      // margin-top: -50%;
+      position: relative;
+      top: -26%;
       padding: 2rem;
     }
 
     @media only screen and (max-width: $bp-xsmall) {
       margin: 2rem 2.5rem;
-      margin-top: -18rem;
+      // margin-top: -18rem;
       padding: 3rem;
     }
 
