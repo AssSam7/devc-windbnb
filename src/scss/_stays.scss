@@ -245,28 +245,46 @@
 
         font-style: normal;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $color-secondary;
+
+        text-align: center;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 2.4rem;
+        }
       }
 
       .type {
         margin-right: 0.75rem;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: $color-hotel-gray;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 2.6rem;
+        }
       }
 
       .separator {
         margin-right: 0.75rem;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: $color-hotel-gray;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 2.6rem;
+        }
       }
 
       .beds {
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: $color-hotel-gray;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 2.6rem;
+        }
       }
     }
 
@@ -280,13 +298,22 @@
         width: 2rem;
         height: 2rem;
         fill: rgba(235, 87, 87, 0.72);
+
+        @media only screen and (max-width: $bp-small) {
+          width: 4rem;
+          height: 4rem;
+        }
       }
 
       .rating {
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         color: $color-primary;
+
+        @media only screen and (max-width: $bp-small) {
+          font-size: 2.6rem;
+        }
       }
     }
   }
@@ -296,7 +323,11 @@
     font-family: "Sansita Swashed", cursive;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 2rem;
     color: $color-primary;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3rem;
+    }
   }
 }
