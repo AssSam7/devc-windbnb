@@ -2,6 +2,10 @@
 
 > This application is a challenge created by Devchallenges to scaffold a hotel booking app similar to Airbnb. Completing this challenge enriches the skills of a front-end developer as there are many usecases like searching and filtering data, re-rendering the template etc.
 
+## Live Demo 🪁
+
+https://adoring-cray-5a05fc.netlify.app/
+
 ## User Stories 🏷️
 
 - User can see a list of properties (hotels)
