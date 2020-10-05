@@ -1,0 +1,129 @@
+/* Font faces */
+// Main Heading and All cards
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap"); // font-family: 'Montserrat', sans-serif;
+
+// Header and Search
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;800&display=swap"); // font-family: 'Mulish', sans-serif;
+
+// Stays (Hotels) Titles
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap"); // font-family: 'Sansita Swashed', cursive;
+
+/* Colors */
+
+// Main colors
+$color-primary: #000000;
+$color-secondary: #4f4f4f;
+$color-secondary-light: #bdbdbd;
+
+// Search panel colors
+$color-search: #333333;
+
+// Hotel cards colors
+$color-hotel-gray: #828282;
+
+/* Media break points */
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 38em; // 600px
+$bp-xsmall: 28.125em; // 450px
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+  font-size: 62.5%; // To make 1px=10px which is 62.5% of 16px (Original)
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 38.5%;
+  }
+
+  @media only screen and (max-width: $bp-xsmall) {
+    font-size: 30.5%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: $color-primary;
+}
+
+.container {
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+
+  @media only screen and (max-width: $bp-largest) {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.overlayBody {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a9a9a9;
+    padding-bottom: 0.2rem;
+    transition: border 0.3s ease-in-out;
+
+    &:hover {
+      border-bottom: 1px solid #a9a9a9;
+    }
+  }
+}

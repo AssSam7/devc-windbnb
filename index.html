@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <title>WindBnb | DevC</title>
+  </head>
+  <body>
+    <!-- Main Wrapper -->
+    <div class="container">
+      <!-- Main Header -->
+      <header class="header">
+        <div class="header__logo margin-sm">
+          <img src="assets/logo.svg" alt="Windbnb Logo" />
+        </div>
+        <div class="header__search margin-sm">
+          <h2 class="search__city">Where do you travel?</h2>
+          <h2 class="search__guests">Add guests</h2>
+          <svg class="search__icon">
+            <use xlink:href="assets/sprites.svg#icon-search"></use>
+          </svg>
+        </div>
+      </header>
+
+      <div class="loader" style="display: none">
+        <svg>
+          <use xlink:href="assets/sprites.svg#icon-spinner2"></use>
+        </svg>
+        <h1>Loading hotels</h1>
+      </div>
+
+      <!-- Stays -->
+      <main class="stays__container margin-sm"></main>
+
+      <div class="not__found" style="display: none">
+        <img src="./assets/hotels-not-found.png" alt="" />
+        <h2>Sorry, Nothing found</h2>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <a
+          href="https://devchallenges.io/profile/LauF9bFJOzH3KexOvknv"
+          target="_blank"
+          >Aslam Mohammed @ Devchallenges.io</a
+        >
+      </footer>
+    </div>
+
+    <!-- Overlay Header -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content(Overlay) -->
+      <div class="overlay modal-content">
+        <div class="overlay__close">
+          <svg class="overlay__close--icon" id="overlay-close">
+            <use xlink:href="assets/sprites.svg#icon-close"></use>
+          </svg>
+        </div>
+        <div class="overlay__search">
+          <div class="osearch__location" tabindex="0">
+            <div class="form__location">
+              <label for="location">Location</label>
+              <input
+                type="text"
+                name="location"
+                id="searchCity"
+                placeholder="Where do you travel?"
+              />
+            </div>
+            <svg
+              class="overlay__close--icon searchLocationCloseIcon"
+              style="visibility: hidden"
+            >
+              <use xlink:href="assets/sprites.svg#icon-close-outline"></use>
+            </svg>
+          </div>
+
+          <div class="osearch__guests">
+            <div class="form__guests">
+              <span>Guests</span>
+              <span id="searchNoOfGuests">Add guests</span>
+            </div>
+            <svg
+              class="overlay__close--icon searchGuestsCloseIcon"
+              style="visibility: hidden"
+            >
+              <use xlink:href="assets/sprites.svg#icon-close-outline"></use>
+            </svg>
+          </div>
+
+          <div class="osearch__search">
+            <button class="btn__search">
+              <svg class="btn__search--icon">
+                <use xlink:href="assets/sprites.svg#icon-search"></use>
+              </svg>
+              Search
+            </button>
+          </div>
+        </div>
+
+        <!-- Details panels -->
+        <div class="overlay__results">
+          <div class="guest__results" style="display: none">
+            <div class="guest__result guest__adults border-bottom">
+              <div class="guest__details">
+                <h2>Adults</h2>
+                <span>Ages 13 or above</span>
+              </div>
+              <div class="guest__count">
+                <button class="adult__inc btn__plus">
+                  <svg class="guest__icon">
+                    <use xlink:href="assets/sprites.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <span class="count adult__count">0</span>
+                <button class="adult__dec btn__minus">
+                  <svg class="guest__icon">
+                    <use xlink:href="assets/sprites.svg#icon-minus"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="guest__result guest__children border-bottom">
+              <div class="guest__details">
+                <h2>Children</h2>
+                <span>Ages 2 to 12</span>
+              </div>
+              <div class="guest__count">
+                <button class="children__inc btn__plus">
+                  <svg class="guest__icon">
+                    <use xlink:href="assets/sprites.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <span class="count children__count">0</span>
+                <button class="children__dec btn__minus">
+                  <svg class="guest__icon">
+                    <use xlink:href="assets/sprites.svg#icon-minus"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="guest__result guest__babies">
+              <div class="guest__details">
+                <h2>Babies</h2>
+                <span>Ages under 2</span>
+              </div>
+              <div class="guest__count">
+                <button class="babies__inc btn__plus">
+                  <svg class="guest__icon">
+                    <use xlink:href="assets/sprites.svg#icon-plus"></use>
+                  </svg>
+                </button>
+                <span class="count babies__count">0</span>
+                <button class="babies__dec btn__minus">
+                  <svg class="guest__icon">
+                    <use xlink:href="assets/sprites.svg#icon-minus"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn__search" id="btn__search--mobile">
+          <svg class="btn__search--icon">
+            <use xlink:href="assets/sprites.svg#icon-search"></use>
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+
+    <script src="public/main-bundled.js"></script>
+  </body>
+</html>

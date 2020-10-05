@@ -1,0 +1,62 @@
+// Utility classes
+.margin-sm {
+  margin: 2rem;
+}
+
+.margin-md {
+  margin: 4rem;
+}
+
+.margin-lg {
+  margin: 6rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.no-search-found {
+  padding: 1rem;
+  color: $color-secondary;
+  text-align: center;
+}
+
+// Generic styling and effects
+%btn-floating {
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  border-radius: 12px;
+  transition: all 1s ease;
+
+  &:hover {
+    transform: perspective(200px) translateZ(20px);
+    box-shadow: set-box-shadow(0.1);
+  }
+}
+
+%input-control {
+  border: 0;
+  outline: none;
+}
+
+// Display border on hover and click (javascript)
+@mixin apply-border-on-focus {
+  border: 1px solid $color-primary;
+  border-radius: 1.6rem;
+}
+
+.apply-border-on-focus {
+  border: 1px solid $color-primary !important;
+  border-radius: 1.6rem;
+}
+
+@mixin apply-border-on-hover {
+  border: 1px solid lighten($color: $color-primary, $amount: 50);
+  border-radius: 1.6rem;
+}
+
+// Generic box shadow
+@function set-box-shadow($color-depth) {
+  @return 0px 5px 5px rgba(0, 0, 0, $color-depth);
+}
