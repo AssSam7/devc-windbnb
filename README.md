@@ -4,7 +4,7 @@
 
 ## Live Demo 🪁
 
-<a href="https://adoring-cray-5a05fc.netlify.app/" target="blank">
+<a href="https://adoring-cray-5a05fc.netlify.app/" target="_blank">Windbnb</a>
 
 ## User Stories 🏷️
 
