@@ -4,7 +4,7 @@
 
 ## Live Demo 🪁
 
-https://adoring-cray-5a05fc.netlify.app/
+<a href="https://adoring-cray-5a05fc.netlify.app/" target="blank">
 
 ## User Stories 🏷️
 
