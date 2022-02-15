@@ -5,6 +5,13 @@ import AppView from "./Views/appView";
 // Model
 import AppModel from "./appModel";
 
+const skeletons = document.querySelectorAll(".skeleton");
+skeletons.forEach((skeleton) => {
+  setTimeout(() => {
+    skeleton.classList.remove("skeleton");
+  }, 1000);
+});
+
 class AppController {
   constructor() {
     this.model = new AppModel(data);
@@ -21,10 +28,8 @@ class AppController {
   searchStays() {
     this.appView.searchBtns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        [
-          this.searchLocation,
-          this.searchNoOfGuests,
-        ] = this.appView.initSearch();
+        [this.searchLocation, this.searchNoOfGuests] =
+          this.appView.initSearch();
         console.log(this.searchLocation, this.searchNoOfGuests);
 
         // Get the stays according to the search

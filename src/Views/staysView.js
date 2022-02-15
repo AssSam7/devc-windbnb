@@ -21,6 +21,12 @@ export default class StaysView {
     setTimeout(() => {
       this.hideLoader();
       this.renderStays(stays);
+      const skeletons = document.querySelectorAll(".skeleton");
+      skeletons.forEach((skeleton) => {
+        setTimeout(() => {
+          skeleton.classList.remove("skeleton");
+        }, 2000);
+      });
     }, 3000);
   }
 
@@ -94,7 +100,7 @@ export default class StaysView {
 
   getStayImage(stayImage) {
     return `
-      <div class="stay__img">
+      <div class="stay__img skeleton">
         <img src="${stayImage}"/>
       </div>
     `;
@@ -103,63 +109,67 @@ export default class StaysView {
   getStayDetails(superHost, type, beds, rating) {
     if (superHost && beds) {
       return `
-        <div class="stay__details">
-          <div class="stay__category">
-            <div class="super-host">Super host</div>
-            <h2 class="type">${type}</h2>
-            <p class="separator">.</p>
-            <h2 class="beds">${beds >= 1 ? `${beds} beds` : `1 bed`}</h2>
+        <div class="stay__details skeleton">
+          <div class="stay__category skeleton">
+            <div class="super-host skeleton">Super host</div>
+            <h2 class="type skeleton">${type}</h2>
+            <p class="separator skeleton">.</p>
+            <h2 class="beds skeleton">${
+              beds >= 1 ? `${beds} beds` : `1 bed`
+            }</h2>
           </div>
-          <div class="stay__rating">
-            <svg class="star">
+          <div class="stay__rating skeleton">
+            <svg class="star skeleton">
               <use xlink:href="assets/sprites.svg#icon-star"></use>
             </svg>
-            <h3 class="rating">${rating}</h3>
+            <h3 class="rating skeleton">${rating}</h3>
           </div>
         </div>
       `;
     } else if (superHost && beds === null) {
       return `
-          <div class="stay__details">
-            <div class="stay__category">
-              <div class="super-host">Super host</div>
-              <h2 class="type">${type}</h2>
+          <div class="stay__details skeleton">
+            <div class="stay__category skeleton">
+              <div class="super-host skeleton">Super host</div>
+              <h2 class="type skeleton">${type}</h2>
             </div>
-            <div class="stay__rating">
-              <svg class="star">
+            <div class="stay__rating skeleton">
+              <svg class="star skeleton">
                 <use xlink:href="assets/sprites.svg#icon-star"></use>
               </svg>
-              <h3 class="rating">${rating}</h3>
+              <h3 class="rating skeleton">${rating}</h3>
             </div>
           </div>
         `;
     } else if (!superHost && beds) {
       return `
-          <div class="stay__details">
-            <div class="stay__category">
-              <h2 class="type">${type}</h2>
-              <p class="separator">.</p>
-              <h2 class="beds">${beds > 1 ? `${beds} beds` : `1 bed`}</h2>
+          <div class="stay__details skeleton">
+            <div class="stay__category skeleton">
+              <h2 class="type skeleton">${type}</h2>
+              <p class="separator skeleton">.</p>
+              <h2 class="beds skeleton">${
+                beds > 1 ? `${beds} beds` : `1 bed`
+              }</h2>
             </div>
-            <div class="stay__rating">
-              <svg class="star">
+            <div class="stay__rating skeleton">
+              <svg class="star skeleton">
                 <use xlink:href="assets/sprites.svg#icon-star"></use>
               </svg>
-              <h3 class="rating">${rating}</h3>
+              <h3 class="rating skeleton">${rating}</h3>
             </div>
           </div>
         `;
     } else {
       return `
-          <div class="stay__details">
-            <div class="stay__category">
-              <h2 class="type">${type}</h2>
+          <div class="stay__details skeleton">
+            <div class="stay__category skeleton">
+              <h2 class="type skeleton">${type}</h2>
             </div>
-            <div class="stay__rating">
-              <svg class="star">
+            <div class="stay__rating skeleton">
+              <svg class="star skeleton">
                 <use xlink:href="assets/sprites.svg#icon-star"></use>
               </svg>
-              <h3 class="rating">${rating}</h3>
+              <h3 class="rating skeleton">${rating}</h3>
             </div>
           </div>
         `;
@@ -168,7 +178,7 @@ export default class StaysView {
 
   getStayTitle(stayTitle) {
     return `
-      <div class="stay__title">
+      <div class="stay__title skeleton">
         ${stayTitle}
       </div>
     `;
