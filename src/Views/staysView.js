@@ -1,7 +1,7 @@
 export default class StaysView {
   constructor(model) {
     this.model = model;
-    this.stays = this.model.data.splice(0, 5);
+    this.stays = this.model.data;
 
     /* DOM Elements */
     // Loader
